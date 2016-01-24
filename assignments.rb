@@ -7,13 +7,7 @@ File.open( "./#{ARGV[0]}", 'r' ).each do |line|
     line = line.split','
     line[0] = line[0].split'/'
 
-    if !ARGV[2].nil?
-      type = 'yaml' if ARGV[2].strip.downcase == "yaml"
-    else
-      type = 'other'
-    end
-
-    if type == 'yaml'
+    if ARGV[2] == "yaml"
       puts "- '" + line[0][0] + '.0.0.0/' + line[0][1] + " via \"eth0\"' # #{ARGV[3]}"
     else
       puts line[0][0] + '.0.0.0/' + line[0][1]
