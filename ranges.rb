@@ -19,5 +19,6 @@ File.open( "./#{ARGV[0]}", 'r' ).each do |line|
     else
       puts line[3] + '/' + line[4].to_s
     end
+    
   end
 end

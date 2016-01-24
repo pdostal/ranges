@@ -18,5 +18,6 @@ File.open( "./#{ARGV[0]}", 'r' ).each do |line|
     else
       puts line[0][0] + '.0.0.0/' + line[0][1]
     end
+    
   end
 end
