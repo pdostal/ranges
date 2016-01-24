@@ -14,10 +14,10 @@ File.open( "./#{ARGV[0]}", 'r' ).each do |line|
     end
 
     if type == 'yaml'
-      puts '- ' + line[0][0] + '.0.0.0/' + line[0][1]
+      puts "- '" + line[0][0] + '.0.0.0/' + line[0][1] + " via \"eth0\"'"
     else
       puts line[0][0] + '.0.0.0/' + line[0][1]
     end
-    
+
   end
 end

@@ -15,10 +15,10 @@ File.open( "./#{ARGV[0]}", 'r' ).each do |line|
     line[4] = 32 - Math.log2(line[4].to_f).floor
 
     if type == 'yaml'
-      puts '- ' + line[3] + '/' + line[4].to_s
+      puts "- '" + line[3] + '/' + line[4].to_s + " via \"eth0\"'"
     else
       puts line[3] + '/' + line[4].to_s
     end
-    
+
   end
 end
